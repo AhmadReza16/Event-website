@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌐 Event Website
 
-## Getting Started
+A clean and responsive **Event Website** built with **React**.  
+This project provides a front-end interface to browse events, showing event details and offering a user-friendly layout — ideal as a demo/portfolio site or as a foundation for a full event management system.
 
-First, run the development server:
+---
+
+## 🎯 Features
+
+- Display a list of events / “cards” for each event  
+- Event detail pages (or ability to expand event info) — e.g. title, date, description, image/banner, location or other metadata  
+- Responsive and modern UI using React components  
+- Easy to extend: you can add features like search, filters, registration/bookmarking, or API integration  
+
+---
+
+## 🛠️ Tech Stack
+
+- [React](https://reactjs.org/) — main front-end library  
+- CSS (or any styling method you used: plain CSS, CSS modules, or a CSS framework)  
+- (Optional) Additional libraries or tools for routing / state management if used  
+
+---
+
+## 📦 Installation & Setup
+
+### Prerequisites  
+- Node.js (version 14 or higher)  
+- npm or yarn  
+
+### Steps
 
 ```bash
-npm run dev
+# Clone the repository
+git clone https://github.com/AhmadReza16/Event-website.git
+
+cd Event-website
+
+# Install dependencies
+npm install
 # or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+yarn install
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Run the development server
+npm start
