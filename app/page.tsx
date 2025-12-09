@@ -2,15 +2,25 @@ import ExploreBtn from "@/components/ExploreBtn";
 import EventCard from "@/components/EventCard";
 import { IEvent } from "@/database";
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL;
-
 const Page = async () => {
-  const base =
-    BASE_URL ||
-    (process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}`
-      : undefined) ||
-    "http://localhost:3000";
+  // Build safe base URL with fallbacks
+  let base: string;
+
+  if (process.env.NEXT_PUBLIC_BASE_URL) {
+    // Use explicitly set base URL
+    base = process.env.NEXT_PUBLIC_BASE_URL;
+  } else if (process.env.VERCEL_URL) {
+    // Use Vercel deployment URL (add https:// protocol)
+    base = `https://${process.env.VERCEL_URL}`;
+  } else {
+    // Fallback to localhost for local development
+    base = "http://localhost:3000";
+  }
+
+  // Ensure base is a valid URL (has protocol)
+  if (!base.startsWith("http://") && !base.startsWith("https://")) {
+    base = `https://${base}`;
+  }
 
   const apiUrl = new URL("/api/events", base).toString();
 
