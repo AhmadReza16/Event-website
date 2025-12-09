@@ -4,20 +4,18 @@ import { IEvent } from "@/database";
 
 const Page = async () => {
   // Build safe base URL with fallbacks
-  let base: string;
+  let base = "http://localhost:3000"; // Default fallback
 
-  if (process.env.NEXT_PUBLIC_BASE_URL) {
-    // Use explicitly set base URL
-    base = process.env.NEXT_PUBLIC_BASE_URL;
-  } else if (process.env.VERCEL_URL) {
-    // Use Vercel deployment URL (add https:// protocol)
-    base = `https://${process.env.VERCEL_URL}`;
-  } else {
-    // Fallback to localhost for local development
-    base = "http://localhost:3000";
+  // Priority 1: Use explicitly set NEXT_PUBLIC_BASE_URL
+  if (process.env.NEXT_PUBLIC_BASE_URL?.trim()) {
+    base = process.env.NEXT_PUBLIC_BASE_URL.trim();
+  }
+  // Priority 2: Use Vercel URL with https protocol
+  else if (process.env.VERCEL_URL?.trim()) {
+    base = `https://${process.env.VERCEL_URL.trim()}`;
   }
 
-  // Ensure base is a valid URL (has protocol)
+  // Safety check: ensure base always has a protocol
   if (!base.startsWith("http://") && !base.startsWith("https://")) {
     base = `https://${base}`;
   }
@@ -32,10 +30,15 @@ const Page = async () => {
       const data = await response.json();
       events = data.events || [];
     } else {
-      console.error("Failed to fetch events", response.status);
+      console.error(
+        "Failed to fetch events from",
+        apiUrl,
+        "status:",
+        response.status
+      );
     }
   } catch (e) {
-    console.error("Error fetching events:", e);
+    console.error("Error fetching events from", apiUrl, ":", e);
   }
 
   return (
