@@ -43,3 +43,13 @@ yarn install
 
 # Run the development server
 npm start
+
+```
+# Screenshots
+
+<img width="1349" height="1376" alt="Screenshot 2025-12-09 at 17-03-38 DevEvent" src="https://github.com/user-attachments/assets/3b88bea2-ef63-4fc5-93f7-1011c56086ff" />
+
+# ---
+
+<img width="1349" height="3259" alt="Screenshot 2025-12-09 at 17-04-25 DevEvent" src="https://github.com/user-attachments/assets/5b16f2d3-c6a3-4691-a9e1-44686ab5af53" />
+
