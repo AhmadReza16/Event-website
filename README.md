@@ -1,6 +1,6 @@
 # 🌐 Event Website
 
-A clean and responsive **Event Website** built with **React**.  
+A clean and responsive **Event Website** built with **Next.js**.  
 This project provides a front-end interface to browse events, showing event details and offering a user-friendly layout — ideal as a demo/portfolio site or as a foundation for a full event management system.
 
 ---
@@ -16,16 +16,21 @@ This project provides a front-end interface to browse events, showing event deta
 
 ## 🛠️ Tech Stack
 
-- [React](https://reactjs.org/) — main front-end library  
-- CSS (or any styling method you used: plain CSS, CSS modules, or a CSS framework)  
-- (Optional) Additional libraries or tools for routing / state management if used  
-
+- Next.js
+- Tailwind CSS
+- TypeScript 
+- Cloudinary
+- MongoDB 
+-
+- MongoDB
+- MongoDB 
+- 
 ---
 
 ## 📦 Installation & Setup
 
 ### Prerequisites  
-- Node.js (version 14 or higher)  
+- Node.js   
 - npm or yarn  
 
 ### Steps
