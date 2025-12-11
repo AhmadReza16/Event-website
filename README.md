@@ -42,7 +42,7 @@ npm install
 yarn install
 
 # Run the development server
-npm start
+npm run dev
 
 ```
 # Screenshots
