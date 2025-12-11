@@ -21,10 +21,7 @@ This project provides a front-end interface to browse events, showing event deta
 - TypeScript 
 - Cloudinary
 - MongoDB 
--
-- MongoDB
-- MongoDB 
-- 
+- Mongoose
 ---
 
 ## 📦 Installation & Setup
